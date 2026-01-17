@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CQT</string>
+    <string name="accessibility_description">Enables CQT to take screenshots and perform system actions via custom tiles.</string>
+</resources>

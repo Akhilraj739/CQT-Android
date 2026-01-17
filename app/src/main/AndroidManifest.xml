@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CQT">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CQT">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".BridgeApprovalActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CQT"
+            android:excludeFromRecents="true"
+            android:taskAffinity="" />
+
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".CQTAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <receiver
+            android:name=".TileExternalReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.artic.cqt.ACTION_UPDATE_TILE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".QuickTileService1" android:exported="true" android:label="CQT Tile 1" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService2" android:exported="true" android:label="CQT Tile 2" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService3" android:exported="true" android:label="CQT Tile 3" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService4" android:exported="true" android:label="CQT Tile 4" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService5" android:exported="true" android:label="CQT Tile 5" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService6" android:exported="true" android:label="CQT Tile 6" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService7" android:exported="true" android:label="CQT Tile 7" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService8" android:exported="true" android:label="CQT Tile 8" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService9" android:exported="true" android:label="CQT Tile 9" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService10" android:exported="true" android:label="CQT Tile 10" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService11" android:exported="true" android:label="CQT Tile 11" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService12" android:exported="true" android:label="CQT Tile 12" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService13" android:exported="true" android:label="CQT Tile 13" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService14" android:exported="true" android:label="CQT Tile 14" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService15" android:exported="true" android:label="CQT Tile 15" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService16" android:exported="true" android:label="CQT Tile 16" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService17" android:exported="true" android:label="CQT Tile 17" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService18" android:exported="true" android:label="CQT Tile 18" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService19" android:exported="true" android:label="CQT Tile 19" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+        <service android:name=".QuickTileService20" android:exported="true" android:label="CQT Tile 20" android:icon="@drawable/ic_launcher_foreground" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter><meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true" /></service>
+    </application>
+
+</manifest>
