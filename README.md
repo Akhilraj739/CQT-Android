@@ -42,8 +42,7 @@
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ## ✍️ Credits
-Developed by **@Akhil739** (CQT Project).
+Developed by **Artic** (CQT Project).
 
 ---
 *Disclaimer: Some features require Root access or Accessibility Service permissions. Use system-level commands with care.*
-
