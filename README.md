@@ -2,10 +2,6 @@
 
 **CQT** (Custom Quick Tiles) is a powerful Android utility that allows you to add fully customizable tiles to your Quick Settings panel. Whether you want to launch specific apps, trigger system actions, or automate root tasks, CQT gives you the control you need directly from your notification shade.
 
-<p align="center">
-  <img src="app_icon.svg" width="128" height="128" />
-</p>
-
 ## ✨ Features
 
 ### 🛠️ Customization
@@ -46,5 +42,6 @@ Developed by **Artic** (CQT Project).
 
 ---
 *Disclaimer: Some features require Root access or Accessibility Service permissions. Use system-level commands with care.*
+
 
 
